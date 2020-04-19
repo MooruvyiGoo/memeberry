@@ -1,0 +1,216 @@
+<html onload="onLoad()">
+    <head onload="onLoad()">
+        <title>Memeberry - мемы, картинки для вп, </title>
+        <meta charset="utf-8">
+        <style name="file1">
+            html[data-theme='light'] {
+                --var1: rgb(191, 191, 191);
+                --var2: rgb(150, 150, 150);
+                --var3: #ffffff;
+                --var4: rgb(200, 200, 200);
+                --var5: rgba(200, 200, 200, 0.5);
+                --var6: ;
+                --var7: ;
+                --var8: ;
+            }
+            html[data-theme='dark'] {
+                --var1: rgb(63, 63, 63);
+                --var2: rgb(45, 45, 45);
+                --var3: #111111;
+                --var4: rgb(55, 55, 55);
+                --var5: rgba(55, 55, 55, 0.5);
+                --var6: ;
+                --var7: ;
+                --var8: ;
+            }
+            body {
+                background-color: var(--var3);
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .menubar {
+                width: 100%; /* Ширина блока */
+                background: var(--var1); /* Для старых браузров */
+                background: linear-gradient(to top, var(--var2), var(--var1));
+                height: 40px;
+                display: flex; /*держит элементы в одну строчку*/
+                align-items: center; /*держит элементы по-центру*/
+                position: sticky;
+                top: 0;
+            }
+            .red {
+                color: red;
+            }
+            .search {
+                width: 300px; /* Ширина поля с кнопкой */
+                border: 1px solid rgb(127, 127, 127); /* Параметры рамки */
+                min-height: 10px; /* Минимальная высота */
+                display: flex;
+                align-items: center;
+                background: var(--var1); /* Цвет фона */
+                border-radius: 4px;
+                outline: none;
+            }
+                input[type="search"] {
+                border: none; /* Убираем рамку */
+                outline: none; /* Убираем свечение в Chrome и Safari */
+                -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+                width: 274px; /* Ширина поля */
+                vertical-align: middle; /* Выравнивание по середине */
+                font-family: Arial; 
+                font-size: 14pt; /* Размер шрифта в пунктах */ 
+                background: var(--var1); /* Цвет фона */
+            }
+            .search-button{
+                width: 28px; /* Ширина кнопки */
+                height: 20px; /* Высота кнопки */
+                border: none; /* Убираем рамку */
+                background: var(--var1); /* Цвет фона */
+                }
+            .rightpane{
+                padding-right: 16px; 
+                float: right;
+                top: 0;
+                background-color: var(--var4);
+                height: 94%;
+                width: 300px;
+                position: relative;
+            }
+            .logo{
+                margin-left: 7%;
+            }
+            .switch{
+                margin-left: 20px;
+            }
+            input[type="checkbox"]{
+                position: relative;
+                width: 40px;
+                height: 20px;
+                -webkit-appearance: none;
+                outline: none;
+                background: rgb(191, 191, 191);
+                border-radius: 10px;
+                transition: .5s;
+                box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+            }
+            input:checked[type="checkbox"]{
+                background: rgb(63, 63, 63);
+            }
+            input[type="checkbox"]:before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                top: 0;
+                left: 0;
+                background: rgb(155,0,255);
+                transition: .5s;
+                transform: scale(1.1);
+                box-shadow: 0 2px 5px rgba(0,0,0,.2);
+            }
+            input:checked[type="checkbox"]:before {
+                left: 20px;
+                background: #00ff00;
+            }
+            .window1{
+                background-color: var(--var5);
+                width: 300px;
+                height: 500px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                filter: blur(50px);
+            }
+        </style>
+        <script type="text/javascript">
+        document.documentElement.setAttribute('data-theme', 'light')
+        function onLoad() {
+            document.getElementById('light').hidden = true
+            console.log("Это консоль")
+            var theme = getCookie("theme");
+            if (theme == "1") {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        function checkCookie() {
+            var username = getCookie("username");
+            if (username != "") {
+                alert("Welcome again " + username);
+            } else {
+                username = prompt("Please enter your name:", "");
+                if (username != "" && username != null) {
+                    setCookie("username", username, 365);
+                }
+            }
+        }
+        function setCookie(name, value, options = {}) {
+            options = {
+                path: '/',
+                // при необходимости добавьте другие значения по умолчанию
+                ...options
+            }
+        if (options.expires instanceof Date) {
+            options.expires = options.expires.toUTCString();
+        }
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+        for (let optionKey in options) {
+            updatedCookie += "; " + optionKey;
+            let optionValue = options[optionKey];
+            if (optionValue !== true) {
+                updatedCookie += "=" + optionValue;
+            }
+            }
+        document.cookie = updatedCookie;
+        }
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+                ));
+                return matches ? decodeURIComponent(matches[1]) : undefined;
+            }
+        function lighttheme() {
+            document.documentElement.setAttribute('data-theme', 'light');
+            setCookie('theme', '0', {secure: false, 'max-age': 360000000});
+            document.getElementById('light').hidden = true;
+            document.getElementById('dark').hidden = false;
+        }
+        function darktheme() {
+            setCookie('theme', '1', {secure: false, 'max-age': 360000000});
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('dark').hidden = true;
+            document.getElementById('light').hidden = false;
+        }
+        </script>
+    </head onload="onLoad()">
+    <body onload="onLoad()">
+        <div id="menubar" class="menubar">
+            <img src="https://lh3.googleusercontent.com/QN1RKUChtLC5nbWFov0yk_x-ILreKUWCfYOVbm6GAJQHERMaZd1LAhy9udl4srl8UV8cD7VNLMVgGjlbz5siwLQbSGoqNiFF8VxE05-0HV6_c0bZ2pDQJt_xjzdMa3P43UeYdHhKXfaYlK9lLkQ5EBUbumAUR7JooQca29fYUlNVqdIuJoE89KIlmuIMdF1KGxiNMy_J5-XsQMmWqJdeVKM6_mn7v6aEuBtnRE2I5ptV_dL5CWyovoxAfNknE3BdGoCeOUWzl9pbyinmBveiyuQ0dN-HfCyfSKBoA3lhLyKHFxzQAuyi-I1TD_UwbgwhC3ueXyMWQASMpEPt2YPvS8XtheJF09suJMVMEmPB7svYJgahEB-8v8pHnSFWBLU3VM84MHqNzFTzMRgcTW4vX4LsYC4l6iHvzhQtPCZIRw1_Zl1HkEj9Y6r0MR06XiOg6KSMPTJ27XqCsGX9niA45IMMAmJIJaqF1Jy1StuYEJjQR2VNxqO-KeQXfweDUg4MMvhn6fg0sV9JtUwCTH6KidajhTGgcRXJn44xBtNPemVpBRJ9nDqa9c2E0KiI92m_2WDC68FU3J1B8tDoFBGek2hm9LgNV1YZfwVBmkuxrWy-TuCwQfMr7jxlPiJLZN7TeE3hXRiCJcM4pYQZul7nTyk0DSmpHOmIp9wvMITDteOpykdrJMTVubOO8_eGc6tDDDpPA2b6X0_2LPy9ZRM-15zHfXbcMo0hngu6WunzCpFxOLMBFrp0uw=w1590-h400-no" width="159" height="40" alt="Memeberry" class="logo" draggable='false'>
+            <form>
+                <div class="search">
+                 <input style="border-radius: 4px;" type="search" name="q" placeholder="искать мемасики...">
+                 <button style="border-radius: 4px;" type="submit" value="" class="search-button"><img src="https://lh3.googleusercontent.com/8hTdLSej7InJtH27qh8aYitDkYZ1oUmfMCWiKAI5W8a9YHqH4RwvgiE4oYvTnFf-4jLkHzMteWE29hoeDCJP-eGT3bWY6SeuiBaMxQm5LSuxSB1dK7VzrOo0rAa6P98AtCEgUjYywjMD82e_wzmITU48tjbRR-rFEQBe3MdQshnMK3V-0PqfVB3GJBmUu-Pj6-_jSKFG3dVHPNhRkPjwMMR21tUtgpy5YMwSslCdPdUs82r4W9c5eO3jBA3EVyQObjo1E1j_EkN3AFb1_Cva3KfAiNt3nDaB8POlfEvdT5yL-pB2HO7mlfrb-uMlQQ6fuJ7PT2jm0w2NhK2HYZXdspUd8xb5T3FInRq1k3KtBVTghvR8YvpDclAJIK51bUR9w41VYPwtaTXtDkVKFY9GrecXWGgVbSANabJYTYx_W6cuqjNXH8l5AewkCRG0F6WoeaS6JDqFpWHKW8TKhvkz7vvevvm8Yh-k6j8FE_Un0hqulm36HeKTfaKwwp9XcZ5giVSepCqsYz53aqCaAWA1C-8LiBET70ELTniTXnQjNNTAsZd-g2plpwXjfwVicsH7NLPS48rSiQDG7s_v9mlBEU9KZvYeoVTcTyyWg3IZqBUYsz3zu8VNIF-592eukzlJU9pNtve5lBZuNPcyAhvY4I0u1bd1hHquFMfhWXxlCQYfvrXeMwcDdIAWxV-H=s32-no" width="20" height="20" alt="искать" draggable='false'></button style="border-radius: 8px;">
+                 </div>
+              </form>
+            <button onclick="darktheme()" id="dark">Тема</button>
+            <button onclick="lighttheme()" id="light">Тема</button>
+        </div>
+
+        </div>
+        <aside class="rightpane">
+            <iframe src="https://discordapp.com/widget?id=610388655432794133&theme=dark" width="300" height="400" allowtransparency="true" frameborder="0"></iframe>
+        </aside>
+        <noscript>
+            <p class="red">Ой-ой! Похоже, у вас не работает JavaScript</p>
+            <img src="https://sun9-31.userapi.com/c206524/v206524893/a761b/-1MAzOsQfUM.jpg">
+            <p><b>1. </b>Причин этому много, возможно у вас старый браузер(Например Interner Explorer), и рекомендуем скачать <a src="https://www.google.com/intl/ru_ru/chrome/">Chrome</a>, <a src="https://www.mozilla.org/ru/firefox/download/thanks/">Firefox</a>, <a src="https://www.opera.com/ru/download">Opera</a>, <a src="https://support.microsoft.com/ru-ru/help/4501095/download-the-new-microsoft-edge-based-on-chromium">Microsoft Edge</a> или <a src="https://browser.yandex.ru/">Яндекс.Браузер(если у вас комп совсем старый)</a></p>
+            <p><b>2. </b>Если у вас Android, то попробуйте полную версию, или обновить и зайти с Chrome. </p>
+            <p><b>3. </b>Если у вас стоит нормальный браузер, а версия последняя, то проверьте настройки браузера и права этого сайта, в настройках должен быть включен JavaScript, а в правах этого сайта разрешен JS</p>
+            <p><b>4. </b>Если вы уже все проверили, и все так, как в 1, 2 и 3 пункте, то проверьте настройки антивируса, брандмауера, файерволла и прочих элементов защиты системы. Там браузерам, а тем-более этому сайту должен быть разрешен JavaScript</p>
+            <p><b>5. </b>Если вам родители на ваш комп поставили родительский контроль, это уже наглость, верно?</p>
+        </noscript>
+    </body>
+</html onload="onLoad()">
