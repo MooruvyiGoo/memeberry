@@ -123,67 +123,11 @@
                 box-shadow: 0 0 10px rgba(0,0,0,0.5);
                 filter: blur(50px);
             }
+            .button{
+                background: linear-gradient(to top, var(--var2), var(--var1));
+            }
         </style>
-        <script type="text/javascript">
-        document.documentElement.setAttribute('data-theme', 'light')
-        function onLoad() {
-            document.getElementById('light').hidden = true
-            console.log("Это консоль")
-            var theme = getCookie("theme");
-            if (theme == "1") {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
-        }
-        function checkCookie() {
-            var username = getCookie("username");
-            if (username != "") {
-                alert("Welcome again " + username);
-            } else {
-                username = prompt("Please enter your name:", "");
-                if (username != "" && username != null) {
-                    setCookie("username", username, 365);
-                }
-            }
-        }
-        function setCookie(name, value, options = {}) {
-            options = {
-                path: '/',
-                // при необходимости добавьте другие значения по умолчанию
-                ...options
-            }
-        if (options.expires instanceof Date) {
-            options.expires = options.expires.toUTCString();
-        }
-        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-        for (let optionKey in options) {
-            updatedCookie += "; " + optionKey;
-            let optionValue = options[optionKey];
-            if (optionValue !== true) {
-                updatedCookie += "=" + optionValue;
-            }
-            }
-        document.cookie = updatedCookie;
-        }
-        function getCookie(name) {
-            let matches = document.cookie.match(new RegExp(
-                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-                ));
-                return matches ? decodeURIComponent(matches[1]) : undefined;
-            }
-        function lighttheme() {
-            document.documentElement.setAttribute('data-theme', 'light');
-            setCookie('theme', '0', {secure: false, 'max-age': 360000000});
-            document.getElementById('light').hidden = true;
-            document.getElementById('dark').hidden = false;
-        }
-        function darktheme() {
-            setCookie('theme', '1', {secure: false, 'max-age': 360000000});
-            document.documentElement.setAttribute('data-theme', 'dark');
-            document.getElementById('dark').hidden = true;
-            document.getElementById('light').hidden = false;
-        }
+        <script type="text/javascript" src="scripts.js">
         </script>
     </head onload="onLoad()">
     <body onload="onLoad()">
