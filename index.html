@@ -38,6 +38,11 @@
             input:focus {
                 outline: none;
             }
+            p {
+              font-family: sans-serif;
+              font-size: 1.44em;
+              font-weight: 500;
+            }
             .menubar {
                 width: 100%; /* Ширина блока */
                 background: var(--var1); /* Для старых браузров */
@@ -77,20 +82,14 @@
                 border: none; /* Убираем рамку */
                 background: var(--var1); /* Цвет фона */
                 }
-            .rightpane{
-                padding-right: 16px; 
-                float: right;
-                top: 0;
-                background-color: var(--var4);
-                height: 94%;
-                width: 64px;
-                position: relative;
-            }
             .logo{
                 margin-left: 7%;
             }
             .switch{
                 margin-left: 20px;
+            }
+            .content{
+            margin-top: 5%
             }
             input[type="checkbox"]{
                 position: relative;
@@ -140,20 +139,15 @@
     </head onload="onLoad()">
     <body onload="onLoad()">
         <div id="menubar" class="menubar">
-            <img src="https://lh3.googleusercontent.com/QN1RKUChtLC5nbWFov0yk_x-ILreKUWCfYOVbm6GAJQHERMaZd1LAhy9udl4srl8UV8cD7VNLMVgGjlbz5siwLQbSGoqNiFF8VxE05-0HV6_c0bZ2pDQJt_xjzdMa3P43UeYdHhKXfaYlK9lLkQ5EBUbumAUR7JooQca29fYUlNVqdIuJoE89KIlmuIMdF1KGxiNMy_J5-XsQMmWqJdeVKM6_mn7v6aEuBtnRE2I5ptV_dL5CWyovoxAfNknE3BdGoCeOUWzl9pbyinmBveiyuQ0dN-HfCyfSKBoA3lhLyKHFxzQAuyi-I1TD_UwbgwhC3ueXyMWQASMpEPt2YPvS8XtheJF09suJMVMEmPB7svYJgahEB-8v8pHnSFWBLU3VM84MHqNzFTzMRgcTW4vX4LsYC4l6iHvzhQtPCZIRw1_Zl1HkEj9Y6r0MR06XiOg6KSMPTJ27XqCsGX9niA45IMMAmJIJaqF1Jy1StuYEJjQR2VNxqO-KeQXfweDUg4MMvhn6fg0sV9JtUwCTH6KidajhTGgcRXJn44xBtNPemVpBRJ9nDqa9c2E0KiI92m_2WDC68FU3J1B8tDoFBGek2hm9LgNV1YZfwVBmkuxrWy-TuCwQfMr7jxlPiJLZN7TeE3hXRiCJcM4pYQZul7nTyk0DSmpHOmIp9wvMITDteOpykdrJMTVubOO8_eGc6tDDDpPA2b6X0_2LPy9ZRM-15zHfXbcMo0hngu6WunzCpFxOLMBFrp0uw=w1590-h400-no" width="159" height="40" alt="Memeberry" class="logo" draggable='false'>
-            <form>
-                <div class="search">
-                 <input style="border-radius: 4px;" type="search" name="q" placeholder="Поиск">
-                 <button style="border-radius: 4px;" type="submit" value="" class="search-button"><img src="https://lh3.googleusercontent.com/8hTdLSej7InJtH27qh8aYitDkYZ1oUmfMCWiKAI5W8a9YHqH4RwvgiE4oYvTnFf-4jLkHzMteWE29hoeDCJP-eGT3bWY6SeuiBaMxQm5LSuxSB1dK7VzrOo0rAa6P98AtCEgUjYywjMD82e_wzmITU48tjbRR-rFEQBe3MdQshnMK3V-0PqfVB3GJBmUu-Pj6-_jSKFG3dVHPNhRkPjwMMR21tUtgpy5YMwSslCdPdUs82r4W9c5eO3jBA3EVyQObjo1E1j_EkN3AFb1_Cva3KfAiNt3nDaB8POlfEvdT5yL-pB2HO7mlfrb-uMlQQ6fuJ7PT2jm0w2NhK2HYZXdspUd8xb5T3FInRq1k3KtBVTghvR8YvpDclAJIK51bUR9w41VYPwtaTXtDkVKFY9GrecXWGgVbSANabJYTYx_W6cuqjNXH8l5AewkCRG0F6WoeaS6JDqFpWHKW8TKhvkz7vvevvm8Yh-k6j8FE_Un0hqulm36HeKTfaKwwp9XcZ5giVSepCqsYz53aqCaAWA1C-8LiBET70ELTniTXnQjNNTAsZd-g2plpwXjfwVicsH7NLPS48rSiQDG7s_v9mlBEU9KZvYeoVTcTyyWg3IZqBUYsz3zu8VNIF-592eukzlJU9pNtve5lBZuNPcyAhvY4I0u1bd1hHquFMfhWXxlCQYfvrXeMwcDdIAWxV-H=s32-no" width="20" height="20" alt="искать" draggable='false'></button style="border-radius: 8px;">
-                 </div>
-              </form>
+            <img src="https://memeberry.glitch.me/memeberry.png" width="159" height="40" alt="Memeberry" class="logo" draggable='false'>
             <button onclick="darktheme()" id="dark">Тема</button>
             <button onclick="lighttheme()" id="light">Тема</button>
         </div>
-
-        </div>
-        <aside class="rightpane">
-        </aside>
+        <center>
+          <div class="content">
+            <p>Пока что этот сайт пуст потому что у создателя нет идей</p>
+          </div>
+        </center>
         <noscript>
             <p class="red">Ой-ой! Похоже, у вас не работает JavaScript</p>
             <img src="https://sun9-31.userapi.com/c206524/v206524893/a761b/-1MAzOsQfUM.jpg">
@@ -164,4 +158,4 @@
             <p><b>5. </b>Если вам родители на ваш комп поставили родительский контроль, это уже наглость, верно?</p>
         </noscript>
     </body>
-</html onload="onLoad()">
+</html>
