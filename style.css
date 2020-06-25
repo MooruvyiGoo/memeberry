@@ -127,6 +127,7 @@ txt {
   font-size: 1.44em;
   font-weight: 500;
   color: var(--var6);
+  flex-wrap: wrap;
 }
 a {
   color: var(--var7);
