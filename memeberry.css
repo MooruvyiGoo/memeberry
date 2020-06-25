@@ -147,3 +147,9 @@ input:checked[type="checkbox"]:before {
 .button{
     background: linear-gradient(to top, var(--var2), var(--var1));
 }
+input[type="text"]{
+    background: linear-gradient(to top, var(--var2), var(--var1));
+}
+input[type="password"]{
+    background: linear-gradient(to top, var(--var2), var(--var1));
+}
