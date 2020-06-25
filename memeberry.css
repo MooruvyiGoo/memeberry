@@ -147,12 +147,21 @@ input:checked[type="checkbox"]:before {
 .button{
     background: linear-gradient(to top, var(--var2), var(--var1));
     color: var(--var6);
+    border-radius: 8px;
+    min-height: 16px;
+    min-width: 64px;
 }
 input[type="text"]{
     background: linear-gradient(to top, var(--var2), var(--var1));
     color: var(--var6);
+    border-radius: 8px;
+    min-height: 16px;
+    min-width: 64px;
 }
 input[type="password"]{
     background: linear-gradient(to top, var(--var2), var(--var1));
     color: var(--var6);
+    border-radius: 8px;
+    min-height: 16px;
+    min-width: 64px;
 }
