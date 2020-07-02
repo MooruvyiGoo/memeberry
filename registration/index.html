@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Регистрация Memeberry</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="icon.gif" type="image/gif"> <!--Иконка сайта-->
+        <link rel="stylesheet" href="https://memeberry.glitch.me/memeberry.css">
+        <script type="text/javascript" src="scripts.js">
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <div id="menubar" class="menubar">
+            <img src="https://lh3.googleusercontent.com/QN1RKUChtLC5nbWFov0yk_x-ILreKUWCfYOVbm6GAJQHERMaZd1LAhy9udl4srl8UV8cD7VNLMVgGjlbz5siwLQbSGoqNiFF8VxE05-0HV6_c0bZ2pDQJt_xjzdMa3P43UeYdHhKXfaYlK9lLkQ5EBUbumAUR7JooQca29fYUlNVqdIuJoE89KIlmuIMdF1KGxiNMy_J5-XsQMmWqJdeVKM6_mn7v6aEuBtnRE2I5ptV_dL5CWyovoxAfNknE3BdGoCeOUWzl9pbyinmBveiyuQ0dN-HfCyfSKBoA3lhLyKHFxzQAuyi-I1TD_UwbgwhC3ueXyMWQASMpEPt2YPvS8XtheJF09suJMVMEmPB7svYJgahEB-8v8pHnSFWBLU3VM84MHqNzFTzMRgcTW4vX4LsYC4l6iHvzhQtPCZIRw1_Zl1HkEj9Y6r0MR06XiOg6KSMPTJ27XqCsGX9niA45IMMAmJIJaqF1Jy1StuYEJjQR2VNxqO-KeQXfweDUg4MMvhn6fg0sV9JtUwCTH6KidajhTGgcRXJn44xBtNPemVpBRJ9nDqa9c2E0KiI92m_2WDC68FU3J1B8tDoFBGek2hm9LgNV1YZfwVBmkuxrWy-TuCwQfMr7jxlPiJLZN7TeE3hXRiCJcM4pYQZul7nTyk0DSmpHOmIp9wvMITDteOpykdrJMTVubOO8_eGc6tDDDpPA2b6X0_2LPy9ZRM-15zHfXbcMo0hngu6WunzCpFxOLMBFrp0uw=w1590-h400-no" width="159" height="40" alt="Memeberry" class="logo" draggable='false'>
+            <button onclick="darktheme()" id="dark">Тема</button>
+            <button onclick="lighttheme()" id="light">Тема</button>
+        </div>
+        <div class="register" style="margin-top: 64px">
+            <center>
+                <form action="register.php" style="flex-wrap: wrap;">
+                    <div><input placeholder="Какое ваше имя?" name="human_name" type="text" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><input placeholder="А какая ваша фамилия?" name="human_surname" type="text" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><input placeholder="Напишите свой ник" name="human_nickname" type="text" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><input placeholder="А теперь @username" name="human_username" type="text" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><input placeholder="Какая ваша электронная почта?" name="human_email" type="email" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><input placeholder="Придумайте пароль" name="human_password" type="password" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><input placeholder="Подтвердите пароль" name="human_password_two" type="password" style="flexbox; margin-top: 16px; width: 300px"></div>
+                    <div><button style="flexbox; margin-top: 16px; width: 300px">Зарегистрироваться</button></div>
+                </form>
+            </center>
+        </div>
+    </body>
+</html>
