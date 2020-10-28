@@ -1,32 +1,123 @@
-<html onload="onLoad()">
-    <head onload="onLoad()">
-        <title>Memeberry</title>
-        <meta charset="utf-8">
-        <link rel="shortcut icon" href="icon.gif" type="image/gif"> <!--Иконка сайта-->
-        <link rel="stylesheet" href="https://memeberry.glitch.me/memeberry.css">
-        <script type="text/javascript" src="scripts.js">
-        </script>
-    </head onload="onLoad()">
-    <body onload="onLoad()">
-        <div id="menubar" class="menubar">
-            <img src="https://memeberry.glitch.me/memeberry.png" width="159" height="40" alt="Memeberry" class="logo" draggable='false'>
-            <button onclick="darktheme()" id="dark">Тема</button>
-            <button onclick="lighttheme()" id="light">Тема</button>
-        </div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <meta charset="utf-8" />
+        <!-- заголовок во вкладке -->
+        <title>Memeberry </title>
+        <link href="meme.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+        <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+        <link type="image/png" sizes="120x120" rel="icon" href="images/favicon-120x120.png">
+
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-wide310x150logo" content="images/mstile-310x310.png">
+        <meta name="msapplication-square310x310logo" content="images/mstile-310x150.png">
+        <meta name="application-name" content="My Application">
+
+        <meta name="theme-color" content="#ffffff">
+</head>
+ 
+ <body>
+     <div id="wrapper">
+	 <!--заголовок основной вверху-->
+     <div id="header" align="center"><a href="index.html" draggable='false' id='logo-link'><img src="images/logo.png" width="400" height="100" alt="Memeberry" id="logo"></a><br><sub-logo>Advanced Technologies</sub-logo></div>
+     <div id="buttons " align="center">
+     <hr class='polosa'>
+	 <!--кнопочки со ссылками, можешь поменять на дискорд, фбук и прочее-->
+        <a href="https://vk.com/memeberry" class="button">  
+                <span class="button__line button__line--top"></span>
+                <span class="button__line button__line--right"></span>
+                <span class="button__line button__line--left"></span>
+                <span class="button__line button__line--bottom"></span>
+                Мемы в ВК
+        </a>
+        <a href="https://discord.gg/59BZgER" class="button">  
+                <span class="button__line button__line--top"></span>
+                <span class="button__line button__line--right"></span>
+                <span class="button__line button__line--left"></span>
+                <span class="button__line button__line--bottom"></span>
+                Сервер Discord
+        </a>
+        <a href="https://discordapp.com/oauth2/authorize?client_id=663796061684498442&permissions=2147483639&scope=bot" class="button">  
+                <span class="button__line button__line--top"></span>
+                <span class="button__line button__line--right"></span>
+                <span class="button__line button__line--left"></span>
+                <span class="button__line button__line--bottom"></span>
+                Sirtin Bot
+        </a>
+<hr class='polosa'>
+</div>       
+   <!--здесь статья, контент можно добавить любой-->  
+        <div  align="center" id="content"><p>
+        <h2 id="news">статьи недели:</h2>		
+        <h2>Да кто такой этот ваш watch dogs?!</h2>
+<p align="justify">Относительно недавно прошёл watch dogs, и хочу поделиться сложившимися от неё впечатлениями.Приступим!
+Игра мне досталась давно(года 2 назад), по подписке xbox live gold. 
+Начал в неё играть, зная что многие считают её откровенно плохой игрой, но я таки жаждил в неё сыграть, ибо это же почти ГТА,
+да ещё и про хацкеров, но игра не зацепила. Почему не зацепила?! Всё просто: не лучшая графика, серый открытый мир, непонятный
+сюжет и сложность... Да, именно сложность, тогда она показалась мне банально сложной.
+Вернулся к игре я уже с обширным игровым опытом и десятками пройденных игр за плечами. Вернулся лишь потому, что уже не знал во что играть.
+И тут я проникся этой игрой по полной, пробежал на одном дыхании, не обращая внимания на то что игру считают, извините, говном.
+Наверное, на иное восприятие данного продукта повлиял сериал "Мисетер робот"*, который я смотрел одновременно с прохождением игры.
+Ну, закончим с прологом и перейдём к самой игре.
+
+В watch dogs игроку предстоит примерить на себя роль бывлого киберпреступника - Эйдена Пирса. Семья Эйдена погибает в самом начале игры от рук
+неизвестного киллера, собственно месть за близких и станет основной мотивацией для похождений Пирса. Банально, но от ветеранов игровой индустрии из
+Франции другого ждать и не стоит. Итак, протогонист берёт свой телефон и отправляется мстить за семью, при этом уничтожая мафию, раскрывая заговоры
+корпораций, снося черепа гангстерам и полиции, что уж говорить - такие они, современные ботаники. Сюжет конечно банален, но кое-что в нём прекрасно...
+"кон-что" - это то как авторы показали, насколько незащищены ваши данные в сети, насколько легко получить к ним доступ, если это делает профессионал.
+Век информатизации - век шпионажа за всем и вся. В целом за сюжетом смотреть интересно, есть там что-то такое...**
+
+Думаю можно перейти к самой важной части любой игры - к геймплею. Что же представляют из себя "смотрящие псы"?! Это ГТА с одной собственной фишкой-
+хакингом. Шарящий человек спросит:"эй, убейсофт, вы чё дураки?! Как этот хрен в пальто так легко хакает всё подряд,
+ведь это не возможно, чтоб взломать чужой пк нужен минимум час". А убейсофт ответит:"Эй, уважаемый дурень, вы хоть субтитры читаете?! Там же написано: всё объединено
+в единую систему, а гг её хакнул, т.ч он бог". Вот вам и пояснение взломов всего и вся - осмысляйте. Ну хакнул и хакнул, что нам то с этого простым гамерам?! А вот что- интерактивный город.
+мы можем: ломать светофоры, сканить людей, обесточивать районы, взрывать газовые трубы, поднимать мосты, и.т.д. Ещё хотел упомянуть стрельбу и вождение - они сносные.
+Ну и накрнец: миссии и открытый мир. Миссии нормальные, но экшона мало. Обычно мы проникаем на какой-то объект, что-то хакаем и сваливаем от погони. Иногда мелькает что-то интересное, но его
+преступно мало. Мне, например, понравились задания в Поуни(городской округ). их выдаёт очень харизматичный хакер с необычной внешностью, мы его ещё встретим во 2-й части***. И отмечу задание побега 
+из тюрьмы, тоже очень классное. Там нас оставляют с одним телефоном и просят свалить из тюрьмы. Какие миссии понравились вам, если вы играли, обязательно пишите.
+А я иду к открытому миру. Тут можно отделаться одним словосочитанием: открытый мир от юбисофт. Вышки, бандиты, коллектэбалсы - всё есть.
+
+Итог:
+Игра мне понравилась! В ней классный сетинг, интересная система хакинга, не плохие анимации. В целеом, если пробежать только сюжет, думаю игра оставит лишь положительные впечатления.
+В ней до последней миссии интересно проникать на частную собственность, бить морды охране и любоваться слоумоушеном, когда вовремя хакнул столбики и машина врага разбилась в смятку.
+Я бы назвал эту игру ассассином в современности, но без паркура, не исключено что она так и задумывалась...
+Хотел уже сохранять и закрывать файл, но вспомнил что мы не выяснили почему все так ненавидят watch dogs. Здесь всё просто - промокомпания убейсофт, которая откровенно врала покупаелям.
+Там нам показывали супер графон, супер детализацию, гениальный ИИ... Да, всего этого нет. Вот и как любить игру, разрабы которой тебе вешают лапшу на уши?!
+
+Спасибо что прочитали мой маленький отзыв, прошу извенить за грамматические и пунктационные ошибки (печатал ночью).
+Также хочу уведомить, что это не обзор, а отзыв, т.ч. прошу не сравнивать с профессиональными работами "stopgame", всё же я не опытный репортёр, а обычный школьник.
+тексты такого типа будут публиеоваться на сайте OOG
+Ещё раз спасибо за прочтение!</p>
+
+Заметки:<br>
+<p align="justify">*"мистер робот" - американскии сериал в жанре психологического трилера. Очень рекомендую к просмотру - шикарнейший проект. Тему хакинга и конфеденциальности раскрывает раз в 5 лучше watch dogs.
+За наводку спасибо <a href="https://vk.com/mdiaz2" class="ssylka" > Кириллу Ш.</a><br>
+**"есть что-то такое..." - сюжет, может, и глупый, но атмосфера и нотка драммы его вытягивает<br>
+Обязательно делитесь мнением об этом тексте, любой критике и рекомендациям буду рад! </p>
+<hr class='polosa'>
+    </p></div>
         <center>
-          <div class="content">
-            <p>Пока что этот сайт пуст потому что у создателя нет идей</p>
-            <p>А пока подпишитесь на нашу <a href="https://vk.com/memeberry">группу в ВК</a>, <a href="https://discord.gg/59BZgER">сервер в Discord</a></p>
-          </div>
+                <div id="sidebar" align="center">
+        	<a href="https://vk.com/gloyev" class="button" >
+                        <span class="button__line button__line--top"></span>
+                        <span class="button__line button__line--right"></span>
+                        <span class="button__line button__line--left"></span>
+                        <span class="button__line button__line--bottom"></span>
+                        Пацан, который сделал сайт
+                </a>
+                <a href="https://vk.com/schtafttein" class="button" >
+                        <span class="button__line button__line--top"></span>
+                        <span class="button__line button__line--right"></span>
+                        <span class="button__line button__line--left"></span>
+                        <span class="button__line button__line--bottom"></span>
+                        Еще один, который подредачил сайт
+                </a>
+                </div>
         </center>
-        <noscript>
-            <p class="red">Ой-ой! Похоже, у вас не работает JavaScript</p>
-            <img src="https://sun9-31.userapi.com/c206524/v206524893/a761b/-1MAzOsQfUM.jpg">
-            <p><b>1. </b>Причин этому много, возможно у вас старый браузер(Например Interner Explorer), и рекомендуем скачать <a src="https://www.google.com/intl/ru_ru/chrome/">Chrome</a>, <a src="https://www.mozilla.org/ru/firefox/download/thanks/">Firefox</a>, <a src="https://www.opera.com/ru/download">Opera</a>, <a src="https://support.microsoft.com/ru-ru/help/4501095/download-the-new-microsoft-edge-based-on-chromium">Microsoft Edge</a> или <a src="https://browser.yandex.ru/">Яндекс.Браузер(если у вас комп совсем старый)</a></p>
-            <p><b>2. </b>Если у вас Android, то попробуйте полную версию, или обновить и зайти с Chrome. </p>
-            <p><b>3. </b>Если у вас стоит нормальный браузер, а версия последняя, то проверьте настройки браузера и права этого сайта, в настройках должен быть включен JavaScript, а в правах этого сайта разрешен JS</p>
-            <p><b>4. </b>Если вы уже все проверили, и все так, как в 1, 2 и 3 пункте, то проверьте настройки антивируса, брандмауера, файерволла и прочих элементов защиты системы. Там браузерам, а тем-более этому сайту должен быть разрешен JavaScript</p>
-            <p><b>5. </b>Если вам родители на ваш комп поставили родительский контроль, это уже наглость, верно?</p>
-        </noscript>
-    </body>
+</body>
 </html>
